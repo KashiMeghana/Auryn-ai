@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURYN | Official Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+        }
+
+        /* --- Navigation Bar --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            background: white;
+            z-index: 1000;
+        }
+
+        .nav-left, .nav-right {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex: 1;
+        }
+
+        .nav-right {
+            justify-content: flex-end;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 900;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            text-align: center;
+            flex: 2;
+            color: #000;
+        }
+
+        .icon-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #333;
+            transition: transform 0.2s;
+        }
+
+        .icon-btn:hover {
+            transform: scale(1.1);
+        }
+/* --- Hero Section Fix --- */
+.hero {
+    width: 100%;
+    /* This fills the screen height minus the 70px navbar */
+    height: calc(100vh - 70px); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* This beige color matches the background of your perfume photo */
+    background-color: #f4f1ee; 
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-image-container {
+    width: 100%;
+    height: 100%;
+    background-image: url('perfume.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    /* 'contain' ensures the WHOLE bottle is visible without being cut off */
+    background-size: contain;
+}
+
+/* Responsive Mobile View */
+@media (max-width: 600px) {
+    .logo { font-size: 24px; }
+    .hero { height: calc(100vh - 60px); }
+}
+/* --- AI Chat Widget --- */
+#ai-chat-widget {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 2000;
+}
+
+.chat-toggle {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.chat-window {
+    display: none; /* Hidden by default */
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    width: 300px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border: 1px solid #eee;
+    flex-direction: column;
+}
+
+.chat-header {
+    background: #000;
+    color: white;
+    padding: 15px;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.chat-body {
+    height: 300px;
+    padding: 15px;
+    overflow-y: auto;
+    background: #fdfdfd;
+}
+
+.ai-msg {
+    background: #f0f0f0;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    width: fit-content;
+}
+
+.chat-footer {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #eee;
+}
+
+.chat-footer input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+    body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #ffffff;
+}
+
+.ai-section {
+    max-width: 600px;
+    margin: 80px auto;
+    text-align: center;
+    padding: 40px;
+    border: 1px solid #e6e6e6;
+}
+
+.ai-section h1 {
+    font-size: 32px;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+button {
+    padding: 12px 30px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+ .result-box {
+        margin-top: 30px;
+        text-align: center; /* Centered for better aesthetic */
+        padding: 20px;
+        border-top: 1px solid #ddd;
+        animation: fadeIn 0.5s ease-in;
+    }
+
+    .result-box h3 {
+        font-family: 'Playfair Display', serif; /* Elegant font for the name */
+        font-size: 28px;
+        margin-bottom: 15px;
+        color: #000;
+    }
+==
+    .fragrance-image {
+        width: 100%;
+        max-width:300px;
+        height: 100%;
+        margin: 0 auto 20px;
+        border-radius: 8px;
+        overflow: hidden;
+        background-color: #f9f9f9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+ .fragrance-image img {
+        width:200px;
+        height: 200px;
+        object-fit: cover; /* Ensures image fills the box nicely */
+    }
+
+    .notes-text {
+        font-style:oblique;
+        line-height: 1.6;
+        margin-bottom: 15px;
+        text-align: left;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+.user-msg {
+    text-align: right;
+    background: #000;
+    color: #fff;
+    padding: 8px 12px;
+    margin: 8px;
+    border-radius: 12px;
+}
+
+.bot-msg {
+    text-align: left;
+    background: #f2f2f2;
+    padding: 8px 12px;
+    margin: 8px;
+    border-radius: 12px;
+}
+</style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-left">
+            <button class="icon-btn"><i data-lucide="menu"></i></button>
+            <button class="icon-btn"><i data-lucide="search"></i></button>
+        </div>
+
+        <div class="logo">AURYN</div>
+
+        <div class="nav-right">
+            <button class="icon-btn"><i data-lucide="user"></i></button>
+            <button class="icon-btn"><i data-lucide="shopping-cart"></i></button>
+        </div>
+    </nav>
+    <section class="hero">
+        <div class="hero-image-container"></div>
+    </section>
+</main>
+        </section>
+    </main>
+
+
+<section class="ai-section">
+    <h1>AURYN AI Fragrance Assistant</h1>
+    <p class="subtitle">Discover a fragrance crafted for your emotion</p>
+
+    <select id="emotionSelect">
+        <option value="">Select Your Emotion</option>
+        <option value="happiness">Happiness</option>
+        <option value="confidence">Confidence / Power</option>
+        <option value="mystery">Mystery</option>
+        <option value="calm">Calm</option>
+        <option value="nature">Nature / Freshness</option>
+        <option value="love">Love / Romance</option>
+        <option value="focus">Focus & Clarity</option>
+    </select>
+
+    <button onclick="generateFragrance()">Generate My Fragrance</button>
+
+    <div id="result" class="result-box"></div>
+</section>
+ <section style="width: 100%; text-align: center; padding: 40px 0;">
+    <h2 style="font-family: 'Playfair Display', serif; margin-bottom: 20px;">FRAGRANCE ESSENCE</h2>
+    <img src="about.jpg" alt="Fragrance Notes" style="max-width: 400px; height: auto; border-radius: 4px;">
+</section>
+
+<section style="position: relative; padding: 100px 20px; background-color: #f4f1ee; text-align: center;">
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 42px; font-weight: 900; color: #000; margin-bottom: 20px;">ABOUT</h2>
+    
+    <a href="javascript:void(0)" onclick="toggleAboutText()" id="readLink" style="color: #000; font-family: 'Inter', sans-serif; text-decoration: underline; font-size: 1.2rem; cursor: pointer;">Read Here</a>
+    
+    <div id="aboutContent" style="display: none; max-width: 700px; margin: 40px auto 0; text-align: left; line-height: 1.8; font-size: 18px; color: #333; animation: fadeIn 0.8s ease;">
+        <p><strong>AURYN</strong> is a new era of luxury fragrance, where artificial intelligence meets human emotion to create deeply personal scents.</p>
+        <p style="margin-top: 20px;">In a world where luxury has long remained static, AURYN introduces personalization through intelligent design. We understand that emotions are deeply personal and not always easy to express aloud.</p>
+        <p style="margin-top: 20px;">Our AI assistant acts as a quiet confidant, guiding you through your emotions to discover a fragrance that truly resonates with your inner state. Each scent is crafted to reflect not just preference, but feeling or transforming mood into memory and emotion into elegance.</p>
+        <p style="margin-top: 20px;"><b>1.</b>The "Evolutionary" Scent 📈: Instead of a "static" refill, the AI remembers the user's feedback. Each refill can be a slightly updated version of their signature scent based on their current mood or the changing season. This makes it a "living" fragrance.
+
+<br><b>2.</b>The Digital Twin (NFT/Blockchain) ⛓️: Every refill is authenticated via a digital chip in the bottle. This proves the juice is authentic L'Oréal quality, protecting the "prestige" of the formula.</br>
+
+<b>3.</b>The Ritual Delivery 📦: If they don't come to the store, the refill arrives in a "Discovery Box" that includes a printed visual of their AI memory and a small sample of a "complementary" note they might want to add next time.</p>
+    </div>
+</section>
+<section style="width: 100%; text-align: center; padding: 60px 0; background: #fff;">
+    <img src="readhere.jpg" alt="AURYN Eau De Parfum" style="max-width: 400px; height: auto;">
+</section>
+<section style="margin: 60px auto; text-align: center; max-width: 800px;">
+    <h2 style="font-family: 'Playfair Display', serif; font-weight: 900; font-size: 38px; color: #000; margin-bottom: 15px;">Contact</h2>
+    <a class="read-link" onclick="toggleContact()" id="contactLink">Click to Email</a>
+</section>
+
+<div id="contactInfo" style="display: none; text-align: center; margin-bottom: 60px; animation: fadeIn 0.8s ease-in;">
+    <p style="font-size: 20px; font-weight: 500;">
+        Email: <a href="mailto:AURYN@gmail.com" style="color: #000; text-decoration: none;">AURYN@gmail.com</a>
+    </p>
+</div>
+
+    <script>
+         lucide.createIcons();
+
+    function generateFragrance() {
+        const emotion = document.getElementById("emotionSelect").value;
+        const result = document.getElementById("result");
+
+        if (!emotion) {
+            result.innerHTML = "<p>Please select an emotion.</p>";
+            return;
+        }
+
+        const fragrances = {
+            happiness: {
+                name: "AURYN Lumière",
+                image: "happiness.jpg", // Replace with your image filename
+                notes: "Top: Citrus, Bergamot<br>Heart: Jasmine, Orange Blossom<br>Base: Vanilla, Musk",
+                desc: "Designed to uplift your mood and radiate joy, this fragrance captures moments of pure happiness."
+            },
+            confidence: {
+                name: "AURYN Dominus",
+                image: "confidence or power.jpg",
+                notes: "Top: Black Pepper, Lemon<br>Heart: Leather, Patchouli<br>Base: Amber, Vetiver",
+                desc: "A bold scent that enhances power, authority, and inner strength."
+            },
+            mystery: {
+                name: "AURYN Enigma",
+                image: "mysterious.jpg",
+ notes: "Top: Saffron, Plum<br>Heart: Rose, Incense<br>Base: Oud, Dark Woods",
+                desc: "An intriguing blend crafted for those who embrace mystery and depth."
+            },
+            calm: {
+                name: "AURYN Serene",
+                image: "calm.jpg",
+                notes: "Top: Lavender, Bergamot<br>Heart: Iris, Chamomile<br>Base: Sandalwood, White Musk",
+                desc: "A soothing fragrance that promotes relaxation and emotional balance."
+            },
+            nature: {
+                name: "AURYN Verde",
+                image: "nature.jpg",
+                notes: "Top: Green Leaves, Mint<br>Heart: Lily, Herbal Notes<br>Base: Cedarwood, Moss",
+                desc: "Inspired by nature, this scent reconnects you with freshness and vitality."
+            },
+            love: {
+                name: "AURYN Amour",
+                image: "love.jpg",
+                notes: "Top: Raspberry, Pink Pepper<br>Heart: Rose, Peony<br>Base: Vanilla, Cashmere Wood",
+                desc: "A romantic fragrance expressing passion, warmth, and intimacy."
+            },
+            focus: {
+ name: "AURYN Clarity",
+                image: "clarity.jpg",
+                notes: "Top: Lemon, Eucalyptus<br>Heart: Green Tea, Rosemary<br>Base: Musk, Soft Woods",
+                desc: "Designed to enhance focus, clarity, and mental sharpness."
+            }
+        };
+
+        const data = fragrances[emotion];
+
+        result.innerHTML = `
+            <div class="fragrance-image">
+                <img src="${data.image}" alt="${data.name}">
+            </div>
+            <h3>${data.name}</h3>
+            <div class="notes-text">
+                <p><strong>Fragrance Notes:</strong><br>${data.notes}</p>
+                <p style="margin-top:10px;"><strong>Emotional Experience:</strong><br>${data.desc}</p>
+            </div>
+        `;
+    }
+function toggleAboutText() {
+    const content = document.getElementById("aboutContent");
+    const link = document.getElementById("readLink");
+    if (content.style.display === "none") {
+        content.style.display = "block";
+        link.innerHTML = "Close Info";
+    } else {
+        content.style.display = "none";
+        link.innerHTML = "Read Here";
+    }
+}
+function toggleContact() {
+    const contactInfo = document.getElementById('contactInfo');
+    const contactLink = document.getElementById('contactLink');
+    
+    if (contactInfo.style.display === 'block') {
+        contactInfo.style.display = 'none';
+        contactLink.innerText = 'Click to Email';
+    } else {
+        contactInfo.style.display = 'block';
+        contactLink.innerText = 'Close Contact';
+    }
+}
+ </script>
+</body>
+</html>
